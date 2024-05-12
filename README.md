@@ -28,7 +28,7 @@ Here're some of the project's best features:
 <p>1. Clone the Project:</p>
 
 ```
-git clone https://github.com/aditya-Kumar421/MultiUserAuthentication.git
+git clone https://github.com/aditya-Kumar421/AccessGuard.git
 ```
 
 <p>2. Create a Virtual Environment:</p>
