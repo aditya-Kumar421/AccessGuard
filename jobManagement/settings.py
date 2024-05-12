@@ -1,9 +1,11 @@
 from pathlib import Path
+from decouple import config
 from datetime import timedelta
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-)f!vlcrrcqf6qpnypc01&8fp!#9_wiuwpmmj^xe(gbqzhu)=+$'
-DEBUG = True
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
+
 ALLOWED_HOSTS = ["*"]
 
 
@@ -63,11 +65,11 @@ WSGI_APPLICATION = 'jobManagement.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'multiuser',
-        'USER': 'root',
-        'PASSWORD': 'kalker@107',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
 AUTH_PASSWORD_VALIDATORS = [
