@@ -66,6 +66,31 @@ python manage.py runserver
 ```
 http://localhost:8000/swagger/
 ```
+<h2>Project Structure</h2>
+jobManagement/
+├── jobManagement/        # Django project directory
+│   ├── __init__.py
+│   ├── settings.py       # Django settings file
+│   ├── urls.py           
+│   └── wsgi.py           
+├── jobOperation/         
+│   ├── migrations/       
+│   ├── __init__.py
+│   ├── admin.py          # Admin configuration
+│   ├── apps.py
+│   ├── models.py         # Database models
+│   ├── tests.py          
+│   └── views.py          # Views and API endpoints
+├── user/                 # Django app for user management/authentication
+│   ├── migrations/       
+│   ├── __init__.py
+│   ├── admin.py          # Admin configuration
+│   ├── apps.py
+│   ├── models.py         # Database models
+│   ├── tests.py         
+│   └── views.py          # Views and API endpoints
+├── manage.py             
+└── requirements.txt      # Python dependencies
 
 <h2>🍰 Contribution Guidelines:</h2>
 
